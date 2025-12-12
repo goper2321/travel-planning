@@ -2,10 +2,17 @@
 <html>
 <head>
   <title>Trip Planner</title>
-  <script src="popup.js"></script>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
 </head>
 <body>
-  <h1>Trip Planner</h1>
-  <p>Your itinerary will be displayed here.</p>
+  <div class="header">
+    <h1>My Trip</h1>
+    <button id="add-stop-button" disabled>Add Current Location</button>
+  </div>
+
+  <ul id="itinerary-list" class="itinerary-list">
+    <!-- Itinerary items will be dynamically inserted here -->
+  </ul>
 </body>
 </html>

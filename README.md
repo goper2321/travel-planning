@@ -58,7 +58,7 @@ A browser extension (for Chrome, Edge, and Firefox) that enhances Google Maps wi
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/travel-planner.git
+    git clone <repository-url>
     ```
 2.  **Load the Extension in Chrome/Edge:**
     - Open your browser and navigate to `chrome://extensions` (for Chrome) or `edge://extensions` (for Edge).
