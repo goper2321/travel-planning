@@ -14,7 +14,7 @@ function renderStops(stops) {
     stops.forEach(stop => {
       const listItem = document.createElement('li');
       listItem.classList.add('itinerary-item');
-      listItem.textContent = stop;
+      listItem.textContent = stop.name; // Display only the name
       itineraryList.appendChild(listItem);
     });
   }
@@ -39,13 +39,13 @@ async function main() {
   const stops = await chrome.runtime.sendMessage({ type: 'GET_STOPS' });
   renderStops(stops);
 
-  // Get the current location from the background script.
+  // Get the current location object from the background script.
   currentLocation = await chrome.runtime.sendMessage({ type: 'GET_CURRENT_LOCATION' });
 
   // Enable the "Add Stop" button if we have a location.
-  if (currentLocation) {
+  if (currentLocation && currentLocation.name) {
     addStopButton.disabled = false;
-    addStopButton.textContent = `Add "${currentLocation}"`;
+    addStopButton.textContent = `Add "${currentLocation.name}"`;
   } else {
     addStopButton.textContent = 'No location detected';
   }

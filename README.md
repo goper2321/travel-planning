@@ -1,4 +1,4 @@
-# Trip Planner: Google Maps Superpowers
+# TripBoost: Google Maps Superpowers
 
 ## Core Idea
 A browser extension (for Chrome, Edge, and Firefox) that enhances Google Maps with trip-planning superpowers, helping users research destinations, organize itineraries, and save travel info directly from the map.
